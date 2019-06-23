@@ -1,0 +1,524 @@
+# Question No 01:  Calculate Area of a Circle
+
+radius = float(input("Input Radius: "))
+area = radius * radius * 22 / 7
+print("Area of Circle with radius", radius, "is", area)
+
+Input Radius: 6
+Area of Circle with radius 6.0 is 113.14285714285714
+
+
+
+# Question No 02:  Check Number either positive, negative or zero
+
+num = int(input("Enter Number: "))
+
+if num > 0:
+    print("The given number is positive")
+elif num < 0:    
+    print("The given number is negative")
+else:
+    print("You entered 0")
+    
+Enter Number: 5
+The given number is positive
+
+
+
+
+# Question No 03:  Divisibility Check of two numbers
+
+numerator = int(input("Enter Numerator: "))
+denominator = int(input("Enter Denominator: "))
+
+if ((numerator / denominator) == int(numerator / denominator)):
+    print("Number", numerator, "is Completely divisible by ", denominator)
+else:
+    print("Number", numerator, "is not Completely divisible by ", denominator)
+
+
+Enter Numerator: 6
+Enter Denominator: 2
+Number 6 is Completely divisible by  2
+
+
+# Question No 04:  Days Calculator
+
+
+from datetime import date
+
+date_str_1 = input("Enter start date in (dd/mm/yy) format: ")
+date_str_2 = input("Enter end date in (dd/mm/yy) format: ")
+
+date1 = date_str_1.split('/')
+date2 = date_str_2.split('/')
+
+for n in range(0,3):
+    date1[n] = int(date1[n])
+    date2[n] = int(date2[n])
+    
+d1 = date(date1[2], date1[1], date1[0])
+d2 = date(date2[2], date2[1], date2[0])
+
+d = d2 - d1
+
+print("There are", d.days, "days in between", date_str_1, "and", date_str_2)  
+
+Enter start date in (dd/mm/yy) format: 12/06/2019
+Enter end date in (dd/mm/yy) format: 16/06/2019
+There are 4 days in between 12/06/2019 and 16/06/2019
+
+
+
+
+# Question No 05:  Calculate Volume of a sphere
+
+radius = float(input("Enter Radius of Sphere: "))
+vol = (4 * 22 * radius * radius * radius) / (3 * 7)
+
+print("Volume of the Sphere with Radius", radius, "is", vol)
+
+
+Enter Radius of Sphere: 50
+Volume of the Sphere with Radius 50.0 is 523809.5238095238
+
+
+# Question No 06:  Copy string n times
+InputString = str(input("Enter String  "))
+RepeatTime = int(input("How many copies of String you need  "))
+NewString = ""
+for x in range (0, RepeatTime):
+    NewString  = NewString + InputString
+print (NewString)   
+
+Enter String  Hi
+How many copies of String you need  4
+HiHiHiHi
+
+
+
+# Question No 07:  Check if number is Even or Odd
+
+num = int(input("Enter Number: "))
+
+if ((num / 2) == int(num / 2)):
+    print(num, "is Even")
+else:
+    print(num, "is Odd")
+
+
+Enter Number: 7
+7 is Odd
+
+
+
+# Question No 08:  Vowel Tester
+
+vowels = ("A", "E", "I", "O", "U")
+
+st = input("Enter a character: ")
+vowel_found = 0
+
+for v in vowels:
+    if (v == st.upper()):
+        vowel_found = 1
+        break;
+
+if (vowel_found == 1):
+    print("Letter", st, "is Vowel")
+else:
+    print("Letter", st, "is not Vowel")
+
+Enter a character: T
+Letter T is not Vowel
+
+
+
+# Question No 09:  Triangle area
+
+base = float(input("Enter magnitude of Triangle base: "))
+height = float(input("Enter Magnitude of Triangle Height: "))
+
+area = (base * height) / 2
+
+print("Area of a Triangle with Height", height, "and Base", base, "is", area)
+
+Enter magnitude of Triangle base: 5
+Enter Magnitude of Triangle Height: 4
+Area of a Triangle with Height 4.0 and Base 5.0 is 10.0
+
+
+
+# Question No 10:  Calculate Interest
+
+p = float(input("Please enter principal amount: "))
+rate = float(input("Please Enter Rate of interest in %: "))
+years = int(input("Enter number of years for investment: "))
+
+powered_rate = 1
+
+for x in range (0, years):
+    powered_rate *= (rate + 1)
+    
+interest = p * (powered_rate - 1)
+
+print("After", years, "years, your principal amount", p, "over an interest rate of", rate, "% will be", p + interest)
+
+
+Please enter principal amount: 50000
+Please Enter Rate of interest in %: 3
+Enter number of years for investment: 5
+After 5 years, your principal amount 50000.0 over an interest rate of 3.0 % will be 51200000.0
+
+
+
+
+# Question No 11:  Euclidean distance
+
+import math
+
+x1 = int(input("Enter Co-ordinate for x1: "))
+x2 = int(input("Enter Co-ordinate for x2: "))
+y1 = int(input("Enter Co-ordinate for y1: "))
+y2 = int(input("Enter Co-ordinate for y2: "))
+
+d = math.sqrt(math.pow((x2-x1), 2) + math.pow((y2-y1), 2))
+
+print("Distance between points (", x1, ",", y1, ") and (", x2, ",", y2, ") is", d)
+
+
+
+Enter Co-ordinate for x1: 4
+Enter Co-ordinate for x2: 3
+Enter Co-ordinate for y1: 5
+Enter Co-ordinate for y2: 6
+Distance between points ( 4 , 5 ) and ( 3 , 6 ) is 1.4142135623730951
+
+
+
+# --------------------------- Start of Question No 12 ----------------------------------
+
+# Question No 12:  Feet to Centimeter Converter
+
+h = float(input("Enter Height in Feet: "))
+
+cm = h * 30.48
+
+print("There are", cm, "Cm in", h, "ft")
+
+Enter Height in Feet: 5
+There are 152.4 Cm in 5.0 ft
+
+
+
+# Question No 13:  BMI Calculator
+
+import math
+
+h = float(input("Enter Height in Cm:"))
+w = float(input("Enter Weight in Kg:"))
+
+#convert cm into meters
+hm = h / 100
+
+bmi = w / math.pow(hm, 2)
+
+print("Your BMI is", bmi)
+
+
+Enter Height in Cm:140
+Enter Weight in Kg:70
+Your BMI is 35.71428571428572
+
+
+# Question No 14:  Sum of n Positive Integers
+
+num = int(input("Enter value of n: "))
+
+total = 0
+
+for x in range(num):
+    total += (x+1)
+    
+print("Sum of n Positive integers till", num, "is", total)
+
+
+
+Enter value of n: 5
+Sum of n Positive integers till 5 is 15
+
+
+# Question No 15:  Digits Sum of a Number
+
+n = str(input("Enter a number: "))
+
+st = '';
+total = 0
+
+for x in n:
+    total += int(x)
+    if (st == ''):
+        st += x
+    else:
+        st += ' + ' + x
+
+        
+print("Sum of", st, "is", total)
+
+
+Enter a number: 6655
+Sum of 6 + 6 + 5 + 5 is 22
+
+
+
+# Question No 16:  Decimal to Binary Converter
+
+num = int(input("Enter a decimal number: "))
+
+binary = '';
+divisor = 2
+
+temp_num = num
+
+while (True):
+    
+    q = int(temp_num / divisor)
+    r = temp_num - (q * divisor)
+    
+    binary = str(r) + binary
+    
+    if (q == 0):
+        break
+        
+    temp_num = q                
+
+print("Binary Representation of", num, "is", binary)
+
+
+Enter a decimal number: 100
+Binary Representation of 100 is 1100100
+
+
+
+# Question No 17:  Binary to Decimal Converter
+
+num = int(input("Enter a Binary number: "))
+
+digits = len(str(num))
+print (digits)
+dec = 0
+
+counter = 1
+
+for x in str(num):
+    dec += math.pow(2, digits - counter) * int(x)
+    counter += 1
+    
+print("Decimal Representation of", num, "is", int(dec))
+
+
+
+Enter a Binary number: 100
+3
+Decimal Representation of 100 is 4
+
+
+
+# Question No 18:  Vowel and Consonants Counter
+
+#------- function to check if a single character is a vowel or not ---------
+def is_vowel(chr, arr):
+    for v in arr:
+        if (v == chr.upper()):
+            return True
+        
+    return False
+
+txt = input("Enter text: ")
+
+vowels = ("A", "E", "I", "O", "U")
+
+total_vowels = 0
+total_consonants = 0
+
+for x in txt:
+    if (x != ' '):
+        if (is_vowel(x, vowels)):
+            total_vowels += 1
+        else:
+            total_consonants += 1
+        
+print("Vowels:", total_vowels)
+print("Consonants:", total_consonants)
+
+
+
+Enter text: abdulhameed
+Vowels: 5
+Consonants: 6
+
+
+# Question No 19:  Palindrome tester
+
+str1 = str(input("Enter text: "))
+str2 = ''
+
+for x in str1:
+    str2 = x + str2
+
+
+if (str1.upper() == str2.upper()):
+    print("Text", str1, "is Palindrome")
+else:           
+    print("Text", str1, "is not a Palindrome")
+
+
+Enter text: Daad
+Text Daad is Palindrome
+
+
+
+# Question No 20:  Count Alphabets, Numbers and Special Characters
+
+#------- function to check if a single character is an Alphabet or not ---------
+def isAlphabet(chr, arr):
+    for a in arr:
+        if (a == chr.upper()):
+            return True
+        
+    return False
+
+alphabets = []
+
+for n in range(65, 90):
+    alphabets.append(chr(n))
+    
+str1 = str(input("Enter text: "))
+
+alphas = 0
+nums = 0
+spaces = 0
+specials = 0
+
+for x in str1:
+    if (isAlphabet(x, alphabets)):
+        alphas += 1
+    elif (x.isnumeric()):
+        nums += 1
+    elif (x == ' '):
+        spaces += 1
+    else:
+        specials += 1
+
+print("Numbers =", nums)        
+print("Alphabets =", alphas)        
+print("Special Characters =", specials)        
+print("Spaces =", spaces)      
+
+
+
+Enter text: dadad233dfsfs!@#####
+Numbers = 3
+Alphabets = 10
+Special Characters = 7
+Spaces = 0
+
+
+
+# Question No 21:  Write a Python program to construct the following pattern
+
+char = "*"
+counter = 1
+diff = 1
+
+for n in range(0, 9):  
+
+    printable_character = ''
+    
+    for x in range(counter):
+        printable_character += char + ' '
+        
+    print(printable_character)    
+    
+    if counter == 5:
+        diff = -1
+    
+    counter += diff
+
+* 
+* * 
+* * * 
+* * * * 
+* * * * * 
+* * * * 
+* * * 
+* * 
+* 
+
+
+# Question No 22:  Write a Python program to construct the following pattern
+
+counter = 1
+diff = 1
+
+for n in range(0, 9):  
+
+    printable_character = ''
+    
+    for x in range(counter):
+        printable_character += str(x+1) + ' '
+        
+    print(printable_character)    
+    
+    if counter == 5:
+        diff = -1
+    
+    counter += diff
+
+
+1 
+1 2 
+1 2 3 
+1 2 3 4 
+1 2 3 4 5 
+1 2 3 4 
+1 2 3 
+1 2 
+1 
+
+
+
+# Question No 23:  Write a Python program to construct the following pattern
+
+counter = 1
+diff = 1
+
+for n in range(0, 9):  
+
+    printable_character = ''
+    
+    for x in range(counter):
+        printable_character += str(n+1)
+        
+    print(printable_character)    
+    
+    counter += diff
+
+
+1
+22
+333
+4444
+55555
+666666
+7777777
+88888888
+999999999
+
+
+
+
+
+
+
+
